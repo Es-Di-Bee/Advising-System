@@ -1,0 +1,28 @@
+public class Course extends Student{
+        private String name = "default name";
+        private String section = "default section";
+        private String time = "default time";
+               
+        public Course() {
+                
+        }
+        
+        public Course(String s, String s1, String s2) {
+                this.name = s;
+                this.section = s1;
+                this.time = s2;
+        }
+        
+        public String getName() {
+                return name;
+        }
+        
+        public String getSection() {
+                return section;
+        }
+        
+        public String getTime() {
+                return time;
+        }
+        
+}

@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class Main {
+    
+    public static void main(String[] args) {
+        boolean exit = false;
+        Scanner sc = new Scanner(System.in);
+        Administrator[] dept = new Administrator[5]; 
+        dept[0] = new Administrator();
+        dept[1] = new Administrator();
+        dept[2] = new Administrator();
+        dept[3] = new Administrator();
+        dept[4] = new Administrator();
+        
+        
+        while (true) {
+            System.out.println("Please select a Department");
+            System.out.println("Press (1) for CSE");
+            System.out.println("Press (2) for EEE");
+            System.out.println("Press (3) for BBA");
+            System.out.println("Press (4) for MNS");
+            System.out.println("Press (5) for ARC");
+            System.out.println("Press (0) to QUIT");
+            System.out.println("\nPress (6) to know the total number of students in the University");
+            
+            while(sc.hasNextInt()) {
+                int x = sc.nextInt();
+                
+                if (x == 0) {
+                    exit = true;
+                    break;
+                } else if (x == 1) {
+                    dept[0].run();
+                    break;
+                } else if (x == 2) {
+                    dept[1].run();
+                    break;
+                } else if (x == 3) {
+                    dept[2].run();
+                    break;
+                } else if (x == 4) {
+                    dept[3].run();
+                    break;
+                } else if (x == 5) {
+                    dept[4].run();
+                    break;
+                } else if (x == 6) {
+                    System.out.println("\nTotal number of Students in Varsity: " + Administrator.totalStudents + "\n");
+                    break;
+                } else { 
+                    System.out.println("Please enter a valid number");
+                    break;
+                }
+            }
+            if (exit) break;
+        }
+        sc.close();
+    }
+}
